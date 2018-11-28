@@ -1,0 +1,175 @@
+@import "normalize";
+@import "base";
+
+@desgin: 750;
+@base: @desgin / 10;
+@mainC: #ff841d;
+
+.mmm_container {
+    width: 100%;
+    // height: 100%;
+    // height: 3000px;
+    // background-color: pink;
+    padding-top: 100rem/@base;
+}
+.header {
+    width: 100%;
+    height:100rem/@base;
+    background-color: @mainC;
+    line-height: 100rem/@base;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    h3 {
+        font-size: 0;
+    }
+    .logo {
+        overflow: hidden;
+        float: left;
+        img {
+            height: 52rem/@base;
+            width: 372rem/@base;
+            margin-top: 22rem/@base;
+            margin-left: 27rem/@base;
+        }    
+    }
+    .appdownload {
+        float: right;
+        img {
+            margin-top: 15rem/@base;
+            height: 68rem/@base;
+            width: 68rem/@base;
+            margin-right: 12rem/@base;
+        }
+    }
+}
+.mmm_search {
+    width: 100%;
+    height: 100rem/@base;
+    background-color: #fff;
+    line-height: 100rem/@base;
+    position: relative;
+    .searchArea {
+        height:60rem/@base;
+        background-color: #f1f1f1;
+        border-radius: 30rem/@base;
+        width: 569rem/@base;
+        margin-left: 20rem/@base;
+        font-size: 27rem/@base;
+        line-height: 60rem/@base;
+        // font-size:14px;
+        text-indent: 37rem/@base;
+        position: absolute;
+        top: 20rem/@base;
+        left: 0;
+    }
+    .searchbtn {
+        width: 128rem/@base;
+        height: 60rem/@base;
+        background-color: @mainC;
+        font-size: 31rem/@base;
+        display: inline-block;
+        line-height: 60rem/@base;
+        text-align: center;
+        color:#fff;
+        border-radius: 30rem/@base;
+        position: absolute;
+        top: 20rem/@base;
+        right: 20rem/@base;
+    }
+}
+.mmm_product {
+    width: 100%;
+    // height: 3000px;
+    // background-color:skyblue;
+    .product_list {
+        height: 100%;
+        .title {
+            // height: 78rem/@base;
+            height: auto;
+            background-color: #ededed;
+            // border-top:2rem/@base solid #cacaca;
+            .titleName {
+                font-size: 33rem/@base;
+                color:#000;
+                border-bottom:2rem/@base solid #cacaca;
+                line-height: 78rem/@base;
+                padding-left: 34rem/@base;
+                font-weight: 700;
+                img {
+                    width: 51rem/@base;
+                    height: 23rem/@base;
+                    float: right;
+                }
+            }
+            ul {
+                height: 100%;
+                display: none;
+                .none {
+                    display: none;
+                }
+            }
+            li {
+                height: 78rem/@base;
+                width: 33.33%;
+                border:1rem/@base;
+                float: left;
+                font-size: 28rem/@base;
+                text-align: center;
+                line-height: 78rem/@base;
+                border-right:2rem/@base solid #cacaca;
+                border-bottom:2rem/@base solid #cacaca;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.user {
+    margin-top: 50rem/@base;
+    // background-color: red;
+    height: 68rem/@base;
+    border: 2rem/@base solid #bbbbbb;
+    div {
+        width: 33.3%;
+        // background-color: skyblue;
+        height: 100%;
+        float: left;
+        font-size: 30rem/@base;
+        line-height: 68rem/@base;
+        text-align: center;
+        img {
+            height: 28rem/@base;
+            width: 28rem/@base;
+            display: inline-block;
+        }
+    }
+    div:nth-child(2) {
+        border-left: 2rem/@base solid #bbbbbb;
+        border-right: 2rem/@base solid #bbbbbb;
+    }
+}
+.footer {
+    height: 124rem/@base;
+    // background-color: red;
+    text-align: center;
+    padding: 35rem/@base 0;
+
+    p {
+        font-size: 23rem/@base;
+    }
+    span {
+        color:#8f6178;
+    }
+    .website {
+        color:#806762;
+    }
+}

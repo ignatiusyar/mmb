@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/flexible/flexible.js"></script>
+    <title>慢慢买 首页</title>
+</head>
+<body>
+    <div class="mmm_container">
+    <!-- 头部区域 -->
+        <header class="header" id="header">
+            <div class="logo">
+                <!-- <h3>慢慢买购物APP</h3> -->
+                <img src="./images/header_logo.png" alt="">
+            </div>
+            <div class="appdownload">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </header>
+    <!-- 搜索区域 -->
+        <div class="mmm_search">
+            <input type="text" class="searchArea" id="searchArea" placeholder="请输入你想比价的商品">
+            <div class="searchbtn">搜索</div>
+        </div>
+    <!-- 导航区域 -->
+        <nav class="nav">
+            <ul class="menu clearfix">
+                <!-- template do this -->
+            </ul>
+        </nav>
+    <!-- 促销区域 -->
+        <div class="onsale">
+            <div class="sale_title txt-cut">
+                <a href="#"><span>超值折扣推荐</span></a>
+                <a href="#"><img src="./images/more.png" alt=""></a>
+            </div>
+            <div class="sale_content">
+                <ul>
+                    <!-- template do this -->
+                </ul>
+                <div class="moresale">
+                    <div class="moresaleBtn">更多优惠信息 »</div>
+                </div>
+            </div>
+        </div>
+    <!-- 品牌排行 -->
+        <div class="brand_rank clearfix">
+            <span>品牌排行</span>
+            <img src="./images/more.png" alt="">
+        </div>
+    <!-- 用户区域 -->
+        <div class="user">
+            </a>
+            <div class="login"><a href="#">登录</a></div>
+            <div class="regist"><a href="#">注册</a></div>
+            <div class="top">
+                <img src="./images/top.jpg"><a href="#" class="goTop">返回顶部</a></div>
+        </div>
+    <!-- 底部区域 -->
+        <footer class="footer">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> <span>-- 掌上比价平台</span>
+            </p>
+            <p class="website">m.manmanbuy.com</p>
+        </footer>
+    </div>
+<script type="text/template" id="menuTpl">
+    {{ each result as v i }}
+        <li>
+            <a href="{{ v.titlehref }}" data-id="{{ i }}">
+                {{ #v.img }}
+                <p>{{ v.name }}</p>
+            </a>
+        </li>
+    {{ /each }}
+</script>
+<script type="text/template" id="saleTpl">
+{{ each result as v i }}
+        <li>
+            <a href="#" class="clearfix" data-id="{{ v.productId }}">
+                <div class="pic">
+                    {{ #v.productImgSm }}
+                </div>
+                <div class="clearfix info">
+                    <div class="title">
+                        <span>{{ v.productName }}</span>
+                        <span>{{ v.productPinkage }}</span>
+                    </div>
+                    <div class="other">
+                        <span class="mall">{{ v.productFrom }} | {{ v.productTime }}</span>
+                        <span class="comment"><i class="icon-comment"></i>{{ v.productComCount.slice(1,2) }}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {{ /each }}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
