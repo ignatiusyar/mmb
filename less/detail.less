@@ -79,8 +79,8 @@
 }
 
 .mmm_productwrap {
-    height: 2000px;
-    background-color: skyblue;
+    // height: 2000px;
+    // background-color: skyblue;
     .product_title {
         height: 70rem/@base;
         border: 2rem/@base solid #e6e6e6;
@@ -120,43 +120,25 @@
             float: left;
         }
     }
-    .product_list {
-        height: 3000px;
-        background-color: pink;
-        li {
-            height: 233rem/@base;
-            background-color: #fff;
-            border-bottom: 1rem/@base solid #e4e4e4;
-            a {
-                display: block;
-            }
+}
+.product_list {
+    height: 100%;
+    background-color: skyblue;
+    .product_detail {
+        margin-top: 40rem/@base;
+        .product-name {
+            font-size: 32rem/@base;
+            text-align: center;
+            height: 159rem/@base;
+            // line-height: 159rem/@base;
         }
-        .pic {
-            width: 225rem/@base;
-            height: 100%;
-            float: left;
-            margin-right: 20rem/@base;
-        }
-        .contentBox {
-            padding: 30rem/@base 0;
-            font-size: 27rem/@base; // float: left;
-            padding-right: 50rem/@base;
-            p:nth-child(2) {
-                margin-top: 15rem/@base;
-                color: #e92a00;
-                font-size: 30rem/@base;
-            }
-            .other {
-                margin-top: 10rem/@base;
-                em {
-                    font-style: normal;
-                    font-size: 23rem/@base;
-                    color: #b4a6ab;
-                }
-            }
+        .product-img {
+            // height: 378rem/@base;
         }
     }
 }
+
+
 
 .user {
     margin-top: 50rem/@base; // background-color: red;
@@ -179,13 +161,6 @@
         border-left: 2rem/@base solid #bbbbbb;
         border-right: 2rem/@base solid #bbbbbb;
     }
-}
-.text-cut {
-    overflow : hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
 }
 
 .footer {

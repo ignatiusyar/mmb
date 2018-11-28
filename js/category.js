@@ -32,7 +32,7 @@ $(function(){
             success:function( info ) {
                 var proListStr = template("proListTpl",info);
                 $('.title ul').html( proListStr );
-                // console.log(info);
+                console.log(info);
             }
         });
     }

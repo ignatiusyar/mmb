@@ -293,10 +293,6 @@ img {
   top: 0.26666667rem;
   right: 0.26666667rem;
 }
-.mmm_productwrap {
-  height: 2000px;
-  background-color: skyblue;
-}
 .mmm_productwrap .product_title {
   height: 0.93333333rem;
   border: 0.02666667rem solid #e6e6e6;
@@ -335,41 +331,17 @@ img {
   font-size: 0.4rem;
   line-height: 0.93333333rem;
 }
-.mmm_productwrap .product_list {
-  height: 3000px;
-  background-color: pink;
-}
-.mmm_productwrap .product_list li {
-  height: 3.10666667rem;
-  background-color: #fff;
-  border-bottom: 0.01333333rem solid #e4e4e4;
-}
-.mmm_productwrap .product_list li a {
-  display: block;
-}
-.mmm_productwrap .product_list .pic {
-  width: 3rem;
+.product_list {
   height: 100%;
-  float: left;
-  margin-right: 0.26666667rem;
+  background-color: skyblue;
 }
-.mmm_productwrap .product_list .contentBox {
-  padding: 0.4rem 0;
-  font-size: 0.36rem;
-  padding-right: 0.66666667rem;
+.product_list .product_detail {
+  margin-top: 0.53333333rem;
 }
-.mmm_productwrap .product_list .contentBox p:nth-child(2) {
-  margin-top: 0.2rem;
-  color: #e92a00;
-  font-size: 0.4rem;
-}
-.mmm_productwrap .product_list .contentBox .other {
-  margin-top: 0.13333333rem;
-}
-.mmm_productwrap .product_list .contentBox .other em {
-  font-style: normal;
-  font-size: 0.30666667rem;
-  color: #b4a6ab;
+.product_list .product_detail .product-name {
+  font-size: 0.42666667rem;
+  text-align: center;
+  height: 2.12rem;
 }
 .user {
   margin-top: 0.66666667rem;
@@ -392,13 +364,6 @@ img {
 .user div:nth-child(2) {
   border-left: 0.02666667rem solid #bbbbbb;
   border-right: 0.02666667rem solid #bbbbbb;
-}
-.text-cut {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 .footer {
   height: 1.65333333rem;

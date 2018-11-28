@@ -62,7 +62,7 @@
 </script>
 <script type="text/template" id="proListTpl">
     {{ each result as v i }}
-        <li>{{ v.category }}</li>
+        <li><a href="productList.html?categoryId={{ v.categoryId }}" data-id="{{ v.categoryId }}">{{ v.category }}</a></li>
     {{ /each }}
 </script>
 <script src="./lib/jquery/jquery.min.js"></script>
