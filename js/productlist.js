@@ -1,6 +1,7 @@
 $(function (){
     var categoryId = getSearch("categoryId");
     // console.log(categoryId)
+    var pageid = 1;
     var totalPage;
     var currentPage = 1;
     breadRender();
@@ -14,7 +15,7 @@ $(function (){
                 categoryid: categoryId,
             },
             success:function ( info ) {
-                console.log(info);
+                // console.log(info);
                 var cateNameStr = template("BreadTpl",info);
                 $('.product_title ul').html( cateNameStr );
             }
@@ -27,10 +28,10 @@ $(function (){
             dataType:"json",
             data:{
                 categoryid:categoryId,
-                pageid: 1 || pageid,
+                pageid: pageid,
             },
             success:function( info ){
-                console.log(info);
+                // console.log(info);
                 var prolistStr = template("prolistTpl",info);
                 $('.product_list ul').html( prolistStr );
                 totalPage = Math.ceil(info.totalCount / info.pagesize); 
@@ -41,14 +42,16 @@ $(function (){
         if( currentPage >= totalPage ){
             return false;
         }
-        currentPage++;
-        prolistRender(currentPage);
+            pageid++;
+            currentPage++;
+            prolistRender(currentPage);
+
     });
     $(".prev").on("click",function(){
         if(currentPage <= 0){
             return false;
-        }
-        currentPage--;
-        prolistRender(currentPage);
+        } else 
+            currentPage--;
+            prolistRender(currentPage);
     });
 })

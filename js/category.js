@@ -16,7 +16,7 @@ $(function(){
     $(".product_list").on("click",".title",function () {
         var id = $(this).data('id');
         $(this).find("ul").toggle()
-        console.log(id)
+        // console.log(id)
         proListRender(id);
         // console.log(id);
     })
@@ -32,7 +32,7 @@ $(function(){
             success:function( info ) {
                 var proListStr = template("proListTpl",info);
                 $('.title ul').html( proListStr );
-                console.log(info);
+                // console.log(info);
             }
         });
     }
