@@ -351,6 +351,10 @@ img {
 .product_list .product_detail .product-collect a {
   display: block;
 }
+.product_list .product_detail .product-collect a img {
+  width: 100%;
+  height: 100%;
+}
 .product_list .tab ul {
   border-top: 0.02666667rem solid #af310b;
   border-bottom: 0.02666667rem solid #af310b;

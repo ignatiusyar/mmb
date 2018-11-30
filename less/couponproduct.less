@@ -1,0 +1,143 @@
+@import "normalize";
+@import "base";
+@desgin: 750;
+@base: @desgin / 10;
+@mainC: #ff841d;
+.mmm_container {
+    width: 100%; // height: 100%;
+    // height: 3000px;
+    // background-color: pink;
+    padding-top: 100rem/@base;
+}
+
+.header {
+    width: 100%;
+    height: 100rem/@base;
+    background-color: #f4483e;
+    line-height: 100rem/@base;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    h3 {
+        font-size: 40rem/@base;
+        color: #fff; // margin: 0 auto;
+        text-align: center;
+        line-height: 100rem/@base;
+        margin: 0;
+    }
+    .left {
+        position: relative;
+        top: 8rem/@base;
+        left: 0;
+        a {
+            width: 80rem/@base;
+            height: 80rem/@base;
+            display: block;
+            background: url(../images/right.svg) no-repeat center center;
+            background-size: 50%;
+        }
+    }
+    .appdownload {
+        float: right;
+        img {
+            margin-top: 15rem/@base;
+            height: 68rem/@base;
+            width: 68rem/@base;
+            margin-right: 12rem/@base;
+        }
+    }
+}
+
+.couponlist_wrapper {
+    .title {
+        font-size: 23rem/@base;
+        text-align: center;
+        color: #8b8d90;
+        height: 65rem/@base;
+        line-height: 65rem/@base;
+    }
+    .couList {
+        li {
+            // height: 315rem/@base;
+            // background-color: skyblue;
+            padding: 0 20rem/@base;
+            padding-top: 20rem/@base;
+            font-size: 28rem/@base;
+            border-bottom: 2rem/@base solid #e2e2e2;
+            background-image: url("../images/arrow-right.svg");
+            background-repeat: no-repeat;
+            background-size: 40rem/@base 40rem/@base;
+            background-position: right center;
+            list-style: none;
+            position: relative;
+            overflow: hidden;
+            a {
+                display: block;
+                overflow: hidden;
+            }
+            .pic {
+                float: left;
+                height: 160rem/@base;
+                width: 200rem/@base;
+                margin-right: 20rem/@base;
+            }
+            .info {
+                overflow: hidden;
+                p {
+                    color: #383332;
+                }
+                .price {
+                    margin-top: 20rem/@base;
+                    color: #000000;
+                    font-weight: 700;
+                }
+                .time {
+                    // margin-left: 218rem/@base;
+                    font-size: 24rem/@base;
+                    color: #f08d33;
+                    margin-top: 45rem/@base;
+                    margin-bottom: 30rem/@base;
+                }
+            }
+        }
+    }
+}
+
+.user {
+    margin-top: 50rem/@base; // background-color: red;
+    height: 68rem/@base;
+    border: 2rem/@base solid #bbbbbb;
+    div {
+        width: 33.3%; // background-color: skyblue;
+        height: 100%;
+        float: left;
+        font-size: 30rem/@base;
+        line-height: 68rem/@base;
+        text-align: center;
+        img {
+            height: 28rem/@base;
+            width: 28rem/@base;
+            display: inline-block;
+        }
+    }
+    div:nth-child(2) {
+        border-left: 2rem/@base solid #bbbbbb;
+        border-right: 2rem/@base solid #bbbbbb;
+    }
+}
+
+.footer {
+    height: 124rem/@base; // background-color: red;
+    text-align: center;
+    padding: 35rem/@base 0;
+    p {
+        font-size: 23rem/@base;
+    }
+    span {
+        color: #8f6178;
+    }
+    .website {
+        color: #806762;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/moneyproduct.css">
+    <script src="./lib/flexible/flexible.js"></script>
+    <title>慢慢买 省钱优惠</title>
+</head>
+
+<body>
+    <div class="mmm_container">
+        <!-- 头部区域 -->
+        <header class="header" id="header">
+            <div class="left fl">
+                <a href="javascript:history.go(-1);"></a>
+            </div>
+            <div class="appdownload">
+                <img src="./images/header_app.png" alt="">
+            </div>
+            <h3>国内折扣</h3>
+        </header>
+        <div class="moneyproduct_wrapper">
+            <!-- <div class="moneyproduct_title">
+                <p class="main_title">预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP</p>
+                <p class="title_info">
+                    <span>京东商城</span>
+                    <span>10-25 14:10</span>
+                    <span>zzr / 慢慢买</span>
+                </p>
+            </div>
+            <div class="moneyproduct_info">
+                <div class="sm_picbox">
+                    <img src="./images/test.jpg" alt="双11预售：威露士 极是洗发水 清新保湿 600ml">
+                </div>
+                <div class="content">
+                    <p class="info1">京东商城日常的售价为1299元，目前双11的预售价为799元包邮，喜欢的慢友们不妨提早预定吧。</p>
+                    <p class="info2">京东商城日常的售价为1299元，目前双11的预售价为799元包邮，喜欢的慢友们不妨提早预定吧。</p>
+                    <p class="info3">京东商城日常的售价为1为1299元为1299元为1299元299元，目前双11的预售价为799元包邮，喜欢的慢友们不妨提早预定吧。</p>
+                </div>
+            </div>
+            <div class="moneyproduct_bpic">
+                <img src="./images/test.jpg" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="golink">
+               
+                <a href="javascript:;" target="_blank"><i class="icon-gobuy"></i>前往购买</a>
+
+            </div>
+            <div class="weixin">
+                <img src="./images/mmbweixin2.png">
+            </div> -->
+
+        </div>
+        <!-- <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a> -->
+        <!-- 用户区域 -->
+        <div class="user">
+            </a>
+            <div class="login"><a href="#">登录</a></div>
+            <div class="regist"><a href="#">注册</a></div>
+            <div class="top">
+                <img src="./images/top.jpg"><a href="#" class="goTop">返回顶部</a>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <footer class="footer">
+            <p>
+                <a href="javascript:;" style="color: Red;">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> <span>-- 掌上比价平台</span>
+            </p>
+            <p class="website">m.manmanbuy.com</p>
+        </footer>
+    </div>
+    <script type="text/template" id="moneyproductTpl">
+        {{ each result as v i }}
+        <div class="moneyproduct_title">
+                <p class="main_title">{{ v.productName }}</p>
+                <p class="title_info">
+                    <span>{{ v.productFrom }}</span>
+                    <span>{{ v.productTime }}</span>
+                    <span>{{ v.productTips }}</span>
+                </p>
+            </div>
+            <div class="moneyproduct_info">
+                <div class="sm_picbox">
+                    {{ #v.productImgSm }}
+                </div>
+                <div class="content">
+                    <p class="info1">{{ v.productInfo }}</p>
+                    <p class="info2">{{ v.productInfo1 }}</p>
+                    <p class="info3">{{ v.productInfo2 }}</p>
+                </div>
+            </div>
+            <div class="moneyproduct_bpic">
+                {{ #v.productImg2 }}
+            </div>
+            <div class="center">
+                <div class="drop">
+                    {{ #v.productCity }}
+                </div>
+            </div>
+            <div class="golink">
+                <a href="javascript:;" target="_blank"><i class="icon-gobuy"></i>前往购买</a>
+
+            </div>
+            <div class="weixin">
+                <img src="./images/mmbweixin2.png">
+            </div>
+            {{ #v.productComment }}
+        {{ /each }}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyproduct.js"></script>
+</body>
+
+</html>
