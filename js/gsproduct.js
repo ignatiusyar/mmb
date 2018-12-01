@@ -16,11 +16,13 @@ $(function (){
                 // console.log(1)
                 // console.log(e)
                 e.stopPropagation()
-                shopId = $(this).data("shopid");
-                // console.log(shopId);
+                // e.preventDefault()
+            
                 $(".second_ul").css({
                     display:"none"
                 });
+                shopId = $(this).data("shopid");
+                console.log(shopId)
                 getgsproduct(shopId,areaId);
             })
         });
@@ -30,9 +32,9 @@ $(function (){
             $(".second_ul_hb").toggle();
             $(".level2_li2").click(function(e){
                 e.stopPropagation()
-                console.log(shopId);
+                // e.preventDefault()
                 areaId = $(this).data("areaid");
-                // console.log(areaId);
+                console.log(areaId);
                 
                 $(".second_ul_hb").css({
                     display:"none"
@@ -42,7 +44,7 @@ $(function (){
             })
         });
 
-        getgsproduct(shopId,areaId);
+        // getgsproduct(shopId,areaId);
 
     function getgsshop() {
         $.ajax({

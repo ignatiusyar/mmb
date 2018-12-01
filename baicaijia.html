@@ -59,7 +59,7 @@
     </div>
     <script type="text/template" id="slideMenuTpl">
         {{ each result as v i }}
-        <li data-id="{{ v.titleId }}"><a href="#">{{ v.title }}</a></li>
+        <li data-id="{{ v.titleId }}"><a href="#" class="{{ i === 0 ? "active" : "" }}">{{ v.title }}</a></li>
         {{ /each  }}
     </script>
     <script type="text/template" id="proListTpl">
