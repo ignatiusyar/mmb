@@ -2,14 +2,13 @@ $(function (){
     getSlideMenu();
     proRender();
     var titleid = 0;
-    $(".li_list").on("click","li",function(){   
-        titleid = $(this).data("id");
-        
-        console.log(titleid);
-        proRender(titleid);
-        // console.log($(this).children().siblings())
-        $(this).children().addClass("active").siblings().removeClass('active');
-    })
+    // $(".li_list").on("click","li",function(){   
+    //     titleid = $(this).data("id");
+    //     console.log(titleid);
+    //     proRender(titleid);
+    //     // console.log($(this).children().siblings())
+    //     $(this).children().addClass("active").parents().siblings().children("a").removeClass();
+    // })
     function getSlideMenu(){
         $.ajax({
             type:"get",
@@ -48,6 +47,14 @@ $(function (){
                     // console.log(info);
                     var prolistStr = template("proListTpl",info);
                     $(".baicai-list ul").html( prolistStr );
+                    // $(".li_list").children().children("li:first-child a").addClass("active");
+                    $(".li_list").on("click","li",function(){   
+                        titleid = $(this).data("id");
+                        // console.log($(this).children().siblings())
+                        // $("li a.active").removeClass();
+                        $(this).children().addClass("active").parents().siblings().children("a").removeClass();
+                        proRender(titleid);
+                    })
                 }
             });
         }

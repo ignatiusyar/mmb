@@ -4,30 +4,44 @@ $(function (){
     getgsshop();
     getgsshoparea();
     getgsproduct(shopId,areaId);
+
     
         // $(".second_ul").css({
         //     display:"block"
         // });
         // 切换商城并渲染
-        $(".level1_li.jd").on("click",function(){
+        $(".jd").on("click",function(){
             $(".second_ul").toggle();
-            $(".level2_li").click(function(){
+            $(".level2_li").click(function(e){
                 // console.log(1)
+                // console.log(e)
+                e.stopPropagation()
                 shopId = $(this).data("shopid");
                 // console.log(shopId);
+                $(".second_ul").css({
+                    display:"none"
+                });
                 getgsproduct(shopId,areaId);
             })
-        })
+        });
         // 切换地区并渲染
-        $(".level1_li.hb").on("click",function(){
+        $(".hb").on("click",function(){
+            // console.log(shopId);
             $(".second_ul_hb").toggle();
-            $(".level2_li2").click(function(){
-                areaId = $(this).data("areaid");
-                console.log(areaId);
-                getgsproduct(shopId,areaId);
+            $(".level2_li2").click(function(e){
+                e.stopPropagation()
                 console.log(shopId);
+                areaId = $(this).data("areaid");
+                // console.log(areaId);
+                
+                $(".second_ul_hb").css({
+                    display:"none"
+                })
+                getgsproduct(shopId,areaId);
+
             })
-        })
+        });
+
         getgsproduct(shopId,areaId);
 
     function getgsshop() {
